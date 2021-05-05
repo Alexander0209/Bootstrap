@@ -1,0 +1,43 @@
+#brand-logo {
+  width: 50px;
+  height: auto;
+}
+
+body {
+  background: linear-gradient(45deg, #03168d, #07133a);
+}
+
+h1 {
+  color: #fff;
+}
+
+header {
+  background-color: #0e1074;
+}
+
+form {
+  box-shadow: 0px 5px 10px 5px #0e1074;
+  background-color: #92fcfc;
+}
+form label, form legend {
+  color: #0e1074;
+}
+
+#popper {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #27e7e7;
+}
+
+@media (min-width: 768px) {
+  #navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+  }
+}
+#carouselCaptions {
+  box-shadow: 0px 10px 20px 5px #0e1074;
+}
