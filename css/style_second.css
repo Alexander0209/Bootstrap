@@ -1,0 +1,10 @@
+body {
+  background: linear-gradient(45deg, #03168d, #07133a);
+  height: 92vh;
+}
+
+@media (max-width: 576px) {
+  #hidden {
+    opacity: 0;
+  }
+}
