@@ -7,6 +7,11 @@ body {
   background: linear-gradient(45deg, #03168d, #07133a);
 }
 
+#progress {
+  height: 2px;
+  margin: -0.5rem;
+}
+
 h1 {
   color: #fff;
 }
@@ -21,6 +26,10 @@ form {
 }
 form label, form legend {
   color: #0e1074;
+}
+
+#carouselCaptions {
+  box-shadow: 0px 10px 20px 5px #0e1074;
 }
 
 #popper {
@@ -38,6 +47,8 @@ form label, form legend {
     z-index: 2000;
   }
 }
-#carouselCaptions {
-  box-shadow: 0px 10px 20px 5px #0e1074;
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    flex-wrap: wrap;
+  }
 }

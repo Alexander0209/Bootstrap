@@ -17,29 +17,31 @@
                 Лига Чемпионов
             </a>
             <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-        
+                <span class="navbar-toggler-icon"></span>
+            </button>        
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
                     <a class="nav-link text-light" href="#">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Карусель</a>
+                        <a class="nav-link text-light" href="#ticket-buy">Покупка билетов</a>
                     </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Статьи</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Статья 1</a>
-                        <a class="dropdown-item" href="#">Статья 2</a>
+                        <a class="dropdown-item" href="#article1">Статья 1</a>
+                        <a class="dropdown-item" href="#article2">Статья 2</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Последняя статья</a>
+                        <a class="dropdown-item" href="#article3">Последняя статья</a>
                     </div>
                     </li>
                 </ul>
             </div>
         </div>
+        <!--<div class="progress" id="progress">
+            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>-->
     </header>
     <div class="container mb-4">
         <div class="row justify-content-center">
@@ -95,7 +97,7 @@
             
         </div>
     </div>
-    <div class="container mb-5">
+    <div class="container mb-5"  id="ticket-buy">
         <div class="row justify-content-center">
             <h1 class="col-12 text-center">Покупка билетов</h1>
             <form class="was-validated p-3 rounded-lg col-lg-5 col-md-6 col-sm-8 col-xs-8">
@@ -111,7 +113,6 @@
                     <label >Пароль</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" required>
                 </div>
-
                 <label for="customControlValidation2">Выберите ваш возраст</label>
                 <div class="custom-control custom-radio">
                     <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
@@ -137,7 +138,7 @@
                 <div class="custom-control custom-checkbox mb-3">
                     <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
                     <label class="custom-control-label" for="customControlValidation1">Вы согласны с нашей политикой?</label>
-                    <div class="invalid-feedback">Нажмите "Да", чтобы продолжыть</div>
+                    <div class="invalid-feedback">Нажмите "Да", чтобы продолжить</div>
                 </div>
                 <div class="form-group ">
                     <label >Напишите ваш отзыв</label>
@@ -176,12 +177,12 @@
                 <button 
                     id="popper"
                     type="button" 
-                    data-content="Можете перейти на дополнительную страницу:  <a href='second_page.html'>Новая страница</a>"
+                    data-content="Можете перейти на дополнительную страницу:  <a href='second_page.html' class='text-decoration-none'>Новая страница</a>"
                     class="btn btn-lg"
                     data-html="true"
                     data-trigger="hover focus"
                     data-toggle="popover"
-                    title="Новая страница"
+                    title="Новая страница <span>&times;</span>"
                 >
                 <i class="bi bi-question-circle"></i>
                 </button>
@@ -191,7 +192,7 @@
     <div class="container mb-5">
         <h1 class="col-12 text-center">Последние новоти</h1>
         <div class="accordion" id="accordionExample">
-            <div class="card">
+            <div class="card" id="article1">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
                         <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -215,7 +216,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" id="article2">
                 <div class="card-header" id="headingTwo">
                     <h2 class="mb-0">
                         <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -238,7 +239,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" id="article3">
               <div class="card-header" id="headingThree">
                     <h2 class="mb-0">
                         <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
