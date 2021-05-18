@@ -17,7 +17,7 @@ function myFunction() {
     document.getElementById("progressBar").style.width = scrolled + "%";
 }
 
-//Валидация формы
+//Небольшая валидация формы
 
 let btnSubmit = document.querySelector("#formSubmit");
 
@@ -64,6 +64,8 @@ switchMode.onclick = () => {
 }
 // Невозможность копировать
 document.onselectstart = noselect;
+document.oncontextmenu = noselect;
+document.ondragstart = noselect;
 
 function noselect() {return false;}
 

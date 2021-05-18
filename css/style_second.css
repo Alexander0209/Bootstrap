@@ -1,10 +1,53 @@
 body {
   background: linear-gradient(45deg, #03168d, #07133a);
-  height: 92vh;
+  height: 100vh;
 }
 
 @media (max-width: 576px) {
   #hidden {
     opacity: 0;
   }
+}
+#divText {
+  background-color: aquamarine;
+  padding: 30px;
+  color: black;
+}
+
+#toHide {
+  color: white;
+  text-decoration: none;
+}
+#toHide:hover {
+  color: aqua;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+textarea {
+  width: 500px;
+}
+
+.special {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+  position: relative;
+  cursor: pointer;
+}
+
+#stop {
+  display: block;
+  margin: 20px auto;
 }
