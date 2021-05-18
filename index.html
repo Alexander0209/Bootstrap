@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" id="theme">
     <title>Bootstrap project</title>
 </head>
 <body>
@@ -22,28 +22,31 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                    <a class="nav-link text-light" href="#">Главная</a>
+                    <a class="nav-link text-light anchor" href="#galery">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#ticket-buy">Покупка билетов</a>
+                        <a class="nav-link text-light anchor" href="#ticket-buy">Покупка билетов</a>
                     </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Статьи</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#article1">Статья 1</a>
-                        <a class="dropdown-item" href="#article2">Статья 2</a>
+                        <a class="dropdown-item anchor" href="#article1">Статья 1</a>
+                        <a class="dropdown-item anchor" href="#article2">Статья 2</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#article3">Последняя статья</a>
+                        <a class="dropdown-item anchor" href="#article3">Последняя статья</a>
                     </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn" id="btnThemeSwitcher"><i class="bi bi-mask" id="theme_icon"></i></div>
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> 
         <div class="progress" id="progress">
-            <div class="progress-bar" id="myBar" role="progressbar"  aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar" id="progressBar" role="progressbar"  aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </header>
-    <div class="container mb-4">
+    <div class="container mb-4" id="galery">
         <div class="row justify-content-center">
             <h2 class="col-12 text-center">Главные матчи недели</h2>
             <div class="col-lg-8 col-md-9 col-sm-11 col-xs-11">
@@ -94,24 +97,23 @@
                     </a>
                 </div>
             </div>
-            
         </div>
     </div>
     <div class="container mb-5"  id="ticket-buy">
         <div class="row justify-content-center">
             <h2 class="col-12 text-center">Покупка билетов</h2>
             <form class="was-validated p-3 rounded-lg col-lg-5 col-md-6 col-sm-8 col-xs-8">
-                <legend>
+                <legend class="text-center">
                     Регистрация для покупки билетов
                 </legend>
                 <div class="form-group">
                     <label >Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
                     <small id="emailHelp" class="form-text text-muted">Мы не будем использовать ваш пароль где-либо еще</small>
                 </div>
                 <div class="form-group">
                     <label >Пароль</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" required>
+                    <input type="password" class="form-control" id="inputPassword" required>
                 </div>
                 <label for="customControlValidation2">Выберите ваш возраст</label>
                 <div class="custom-control custom-radio">
@@ -136,19 +138,19 @@
                     </select>
                   </div>
                 <div class="custom-control custom-checkbox mb-3">
-                    <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
-                    <label class="custom-control-label" for="customControlValidation1">Вы согласны с нашей политикой?</label>
+                    <input type="checkbox" class="custom-control-input" id="agreePrivacy" required>
+                    <label class="custom-control-label" for="agreePrivacy">Вы согласны с нашей политикой?</label>
                     <div class="invalid-feedback">Нажмите "Да", чтобы продолжить</div>
                 </div>
                 <div class="form-group ">
                     <label >Напишите ваш отзыв</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="feedBack" rows="3"></textarea>
                 </div>
                 <div class="row justify-content-center">
                     <button type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#staticBackdrop">
                         Сохранить
                     </button>
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" id="formSubmit" class="btn btn-primary">
                         Отправить
                     </button>
                 </div>
@@ -174,7 +176,7 @@
             </form>
         </div>
     </div>
-    <div class="container mb-5">
+    <div class="container mb-3">
         <div class="row justify-content-center">
             <div >
                 <button 
@@ -192,7 +194,7 @@
             </div>
         </div>
     </div>
-    <div class="container mb-5">
+    <div class="container">
         <h2 class="col-12 text-center">Последние новоcти</h2>
         <div class="accordion" id="accordionExample">
             <div class="card" id="article1">
@@ -267,7 +269,7 @@
             </div>
         </div>
     </div>
-    <footer class="text-center text-white" style="background-color: #0a4275;">
+    <footer class="text-center text-white mt-5" style="background-color: #0a4275;">
         <div class="container p-4 pb-0">
             <section class="mb-4">
                 <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Alexander0209" target="_blank" role="button">
@@ -282,6 +284,9 @@
                 <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/alexander-sklyarov-b79878188/" target="_blank" role="button">
                     <i class="bi bi-linkedin"></i>
                 </a>
+              </section>
+              <section>
+                <p id="browser_version">Версия не определена</p>
               </section>
         </div>
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
