@@ -59,7 +59,7 @@ btnText.addEventListener("click", () => {
     let differentLetters = document.querySelector("#text").value.split('');
     let showPlace = document.querySelector('.listItems');
     let includeA = 0;
-    let stringA = ['a','A'];
+    let stringA = ['а','А'];
     showPlace.innerHTML = '';
 
     if(text.length <= 1 && text[0] == '') {

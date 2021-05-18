@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(45deg, #03168d, #07133a);
+    background-color: #03168d; 
     height: 100vh;
 }
 
@@ -35,9 +35,13 @@ textarea{
 }
 
 .special{
-    height: 100px;
     width: 100%;
     margin-bottom: 100px;
+}
+
+.bi-hand-index-thumb{
+    font-size: 4rem;
+    color: #040f58;
 }
 
 .square {
