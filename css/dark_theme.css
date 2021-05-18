@@ -76,7 +76,15 @@ form label, form legend {
 }
 @media (max-width: 580px) {
   .navbar-toggler {
-    margin-right: 10px;
+    margin-right: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .nav-item {
+    padding-left: 15px;
   }
 
   #brand-name {

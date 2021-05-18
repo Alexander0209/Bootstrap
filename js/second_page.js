@@ -57,7 +57,7 @@ btnText.addEventListener("click", () => {
     
     let text = document.querySelector("#text").value.split(' ');
     let differentLetters = document.querySelector("#text").value.split('');
-    let showPlace = document.querySelector('.listItems');
+    let showPlace = document.querySelector('.modal-body');
     let includeA = 0;
     let stringA = ['а','А'];
     showPlace.innerHTML = '';
