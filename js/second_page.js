@@ -59,13 +59,13 @@ btnText.addEventListener("click", () => {
     let differentLetters = document.querySelector("#text").value.split('');
     let showPlace = document.querySelector('.modal-body');
     let includeA = 0;
-    let stringA = ['а','А'];
+    let stringA = ['а','А']; //для русских букв а
     showPlace.innerHTML = '';
 
     if(text.length <= 1 && text[0] == '') {
         return (showPlace.innerHTML = "Вы ничего не ввели");
     }
-    text[0] = text[0].toUpperCase();
+    
     let ul = document.createElement('ul');
     showPlace.append(ul);
 
@@ -78,12 +78,12 @@ btnText.addEventListener("click", () => {
     let fragment = new DocumentFragment();
 
     for(let i = 0; i < text.length; i++){
-    
         let li = document.createElement('li');
         li.innerHTML = text[i];
         if((text.length-1 == i) || (text.length-2 == i)){
             li.innerHTML = text[i].toLowerCase();
         }
+        text[0] = text[0].toUpperCase();
         fragment.append(li);
     }
 
