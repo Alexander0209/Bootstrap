@@ -59,7 +59,7 @@ btnText.addEventListener("click", () => {
     let differentLetters = document.querySelector("#text").value.split('');
     let showPlace = document.querySelector('.modal-body');
     let includeA = 0;
-    let stringA = ['а','А']; //для русских букв а
+    let stringA = ['а', 'А']; //для русских букв а
     showPlace.innerHTML = '';
 
     if(text.length <= 1 && text[0] == '') {
@@ -70,7 +70,7 @@ btnText.addEventListener("click", () => {
     showPlace.append(ul);
 
     for (let key in differentLetters){
-        if(differentLetters[key].includes(stringA[0]) || differentLetters[key].includes(stringA[1])){
+        if(stringA[0].includes(differentLetters[key]) || stringA[1].includes(differentLetters[key])){
             includeA++;
         }
     }
@@ -80,10 +80,14 @@ btnText.addEventListener("click", () => {
     for(let i = 0; i < text.length; i++){
         let li = document.createElement('li');
         li.innerHTML = text[i];
-        if((text.length-1 == i) || (text.length-2 == i)){
-            li.innerHTML = text[i].toLowerCase();
+        if(i == 0){
+            text[0] = text[0].toUpperCase();
+            li.innerHTML = text[0];
         }
-        text[0] = text[0].toUpperCase();
+        else if((text.length-1 == i) || (text.length-2 == i)){
+            li.innerHTML = text[i].toLowerCase();
+            console.log(text[i].toLowerCase())
+        }
         fragment.append(li);
     }
 
