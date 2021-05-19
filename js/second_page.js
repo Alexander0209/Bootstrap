@@ -59,7 +59,7 @@ btnText.addEventListener("click", () => {
     let differentLetters = document.querySelector("#text").value.split('');
     let showPlace = document.querySelector('.modal-body');
     let includeA = 0;
-    let stringA = ['а', 'А']; //для русских букв а
+    let stringA = ['а', 'А', 'a', 'A']; //для русских букв а
     showPlace.innerHTML = '';
 
     if(text.length <= 1 && text[0] == '') {
@@ -70,7 +70,7 @@ btnText.addEventListener("click", () => {
     showPlace.append(ul);
 
     for (let key in differentLetters){
-        if(stringA[0].includes(differentLetters[key]) || stringA[1].includes(differentLetters[key])){
+        if(stringA[0].includes(differentLetters[key]) || stringA[1].includes(differentLetters[key]) || stringA[2].includes(differentLetters[key]) || stringA[3].includes(differentLetters[key])){
             includeA++;
         }
     }
@@ -92,6 +92,5 @@ btnText.addEventListener("click", () => {
     }
 
     ul.append(fragment);
-    let result =`В тексте содержится: ${includeA} букв а`;
-    showPlace.append(result);
+    showPlace.append(`В тексте содержится: ${includeA} букв а`);
 })
